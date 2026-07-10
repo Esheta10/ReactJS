@@ -1,0 +1,18 @@
+.card{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(129, 87, 115);
+    gap: 20px;
+    box-shadow: 2px 2px  10px black;
+}
+
+h1{
+    padding: 10px;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
