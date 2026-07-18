@@ -1,9 +1,10 @@
 import React from 'react'
+import UserCard from './components/UserCard'
 
 function App() {
   return (
     <div>
-      <h1 className="bg-amber-900">hello</h1>
+     <UserCard/>
     </div>
   )
 }
