@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  background-color:rgb(34, 34, 34);
+  color: whitesmoke;
+  margin: 50px auto;
+}
+
+.card{
+  background-color: mediumpurple;
+  color: black;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-content: center;
+}
+
+.card .text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card button{
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: salmon;
+  color: black;
+  font-size: 16px;
+}
