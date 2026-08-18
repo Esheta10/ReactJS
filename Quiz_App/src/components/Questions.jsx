@@ -4,16 +4,22 @@ import questions from "./questions.json";
 const Questions = ({setIsOver, setScore}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  console.log(questions[currentIndex]);
+  console.log(questions[currentIndex]); 
+  
+  /** 
+   * questions[0] ---> 0th index ka question 
+   * Similarly,
+   * questions[i] ---> ith index ka question
+  */
 
   const handleClick = (option) => {
-       if(option === questions[currentIndex].answer){
+       if(option === questions[currentIndex].answer){ // agar selected option --> answer se match kar raha, previous score mein 1 add karo
             setScore(prev => prev+1);
        }
-       if(currentIndex < questions.length-1)
+       if(currentIndex < questions.length-1) // agr current question , questions array ke length ke andar hai, then move to next question by incrementing index
             setCurrentIndex(prev => prev+1)
        else 
-            setIsOver(true); 
+            setIsOver(true); // reached the limit, saare questions over ho gaye
   }
 
   return (
