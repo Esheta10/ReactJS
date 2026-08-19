@@ -1,18 +1,21 @@
-# React + Vite
+# React Conditional Rendering & Responsive Navbar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean React JS application demonstrating dynamic UI patterns with Tailwind CSS and `useState`. This project showcases dynamic Modal Popups and a fully responsive Navigation Bar with a smooth mobile hamburger drawer.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Dynamic Modal Popups:** Reusable modal component triggered by user actions (such as Edit or Delete confirmation dialogs).
+* **Responsive Hamburger Navbar:** Automatically switches from a horizontal navbar on desktop screens to an animated hamburger sidebar menu on mobile screens (720px breakpoint).
+* **State Management:** Simple and effective state handling using React's `useState` hook.
 
-## React Compiler
+<img width="879" height="188" alt="image" src="https://github.com/user-attachments/assets/0fd231e4-b0b1-4138-9d5a-0a2396001e32" />
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+<img width="497" height="486" alt="image" src="https://github.com/user-attachments/assets/a8f297c2-7d95-4f42-bbc9-bd47725ad6cd" />
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React JS
+* **Styling:** Tailwind CSS
+* **Icons:** React Icons (`react-icons/fi`)
+
