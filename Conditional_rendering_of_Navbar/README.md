@@ -1,10 +1,9 @@
 # React Conditional Rendering & Responsive Navbar
 
-A clean React JS application demonstrating dynamic UI patterns with Tailwind CSS and `useState`. This project showcases dynamic Modal Popups and a fully responsive Navigation Bar with a smooth mobile hamburger drawer.
+A clean React JS application demonstrating dynamic UI patterns with Tailwind CSS and `useState`. This project showcases a fully responsive Navigation Bar with a smooth mobile hamburger drawer.
 
 ## Features
 
-* **Dynamic Modal Popups:** Reusable modal component triggered by user actions (such as Edit or Delete confirmation dialogs).
 * **Responsive Hamburger Navbar:** Automatically switches from a horizontal navbar on desktop screens to an animated hamburger sidebar menu on mobile screens (720px breakpoint).
 * **State Management:** Simple and effective state handling using React's `useState` hook.
 
