@@ -1,18 +1,9 @@
-# React + Vite
+# Conditional Rendering of Popup Menu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### A sleek, responsive modal popup component built with React JS and Tailwind CSS that uses conditional rendering to seamlessly display dynamic alerts like "Delete" or "Edit" confirmation dialogs. State management allows modals to open on user triggers and instantly close via intuitive dismiss controls.
 
-Currently, two official plugins are available:
+<img width="478" height="266" alt="image" src="https://github.com/user-attachments/assets/0a774e44-3aa4-451b-8d30-b71784f91df8" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<img width="492" height="316" alt="image" src="https://github.com/user-attachments/assets/d87f1425-ca5e-4ed1-8931-4171a859bd5d" />
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Uploading image.png…]()
