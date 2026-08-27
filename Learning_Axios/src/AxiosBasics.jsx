@@ -4,7 +4,13 @@ import axios from "axios"
 const AxiosBasics = () => {
 
   const config = {
-    baseURL: "https://jsonplaceholder.typicode.com/users"
+    baseURL: "https://jsonplaceholder.typicode.com/users",
+    headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authority: "Bearer uwhfwioGH84Y589Y"
+    },
+    timeout: "1000" // miliseconds
   }
   const fetchUsers = async () =>{
     const response = await axios(config);
