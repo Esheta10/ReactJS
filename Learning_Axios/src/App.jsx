@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from "axios"
+import AxiosBasics from './AxiosBasics'
 
 const App = () => {
 
@@ -20,6 +21,9 @@ const App = () => {
   return (
     <div className="flex flex-col items-center justify-center text-2xl mt-10">
       <button onClick={fetchData} className="border-2 rounded-full px-7 py-3 cursor-pointer">Fetch Posts</button>
+
+      <AxiosBasics/>
+      
     </div>
   )
 }
