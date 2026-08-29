@@ -61,6 +61,16 @@ const UserProfiles = () => {
     ))
   }
 
+  const handleEditClick = (user) => {
+
+      setFormDetails({
+        name: user.name,
+        age: user.age,
+        id: user.id,
+        isEditing: true
+      })
+  }
+
   // Initial load par data lana
   useEffect(()=>{
     fetchPost();
@@ -92,7 +102,7 @@ const UserProfiles = () => {
                                 <h1 className="font-bold text-3xl">User Details:</h1>
                                 <p>Name: {user.name}</p>
                                 <p>Age: {user.age}</p>
-                                <button onClick={()=>updateDetails(user)} className="px-7 py-3 border-3 rounded-lg mt-10 cursor-pointer">Edit</button>
+                                <button onClick={()=>handleEditClick(user)} className="px-7 py-3 border-3 rounded-lg mt-10 cursor-pointer">Edit</button>
                             </div>
                         ))
                     }
