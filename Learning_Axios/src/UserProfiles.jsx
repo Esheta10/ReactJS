@@ -79,6 +79,8 @@ const UserProfiles = () => {
   // fetchPost       --> for retrieving posts
   // updateDetails   --> for updating details
   // postData        --> for posting data
+  // handleClick     --> change in input area when writing something
+  // handleEditClick -->  editing the name and age fields of specific user
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 mt-20 text-2xl">
