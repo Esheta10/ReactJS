@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/store-logo.png'
 const NavBar = () => {
   return (
@@ -8,11 +8,16 @@ const NavBar = () => {
         <img src={logo} alt="logo"  className="w-18 h-16 object-contain"/>
     </div>
       <div className="flex items-center justify-center gap-10">
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
+        <Menu to={"/"} title={"Home"}/>
+        <Menu to={"/products"} title={"Products"}/>
       </div>
     </div>
   )
 }
 
+const Menu = ({to,title}) => {
+  return (
+    <NavLink to={to}  className={({isActive}) => isActive ? "text-[tomato]" : ""}>{title}</NavLink>
+  )
+}
 export default NavBar
