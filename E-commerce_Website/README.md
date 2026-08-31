@@ -2,6 +2,12 @@
 
 A modern, responsive e-commerce website built with **React**, **Vite**, **Tailwind CSS**, and **React Router**. The application fetches product data from the FakeStore API and provides a smooth shopping experience with product browsing and detailed product views.
 
+<img width="1340" height="595" alt="image" src="https://github.com/user-attachments/assets/c8dfcede-1492-43d9-b0be-a67bf3ee157e" />
+
+<img width="1348" height="618" alt="image" src="https://github.com/user-attachments/assets/5a783048-7147-4dae-a376-e2921610de87" />
+
+<img width="1345" height="623" alt="image" src="https://github.com/user-attachments/assets/83022adb-4b27-471e-af58-64c568769c40" />
+
 ## ✨ Features
 
 - **Product Listing**: Browse all products with beautiful cards displaying:
@@ -30,14 +36,14 @@ A modern, responsive e-commerce website built with **React**, **Vite**, **Tailwi
 
 ## 🚀 Tech Stack
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| React | 19.2.8 | UI Framework |
-| Vite | 8.2.2 | Build Tool & Dev Server |
-| Tailwind CSS | 4.3.3 | Styling |
-| React Router | 7.18.3 | Client-side Routing |
-| Axios | 1.20.0 | HTTP Client |
-| ESLint | 10.9.0 | Code Quality |
+| Technology | Purpose |
+|------------|---------|
+| React | UI Framework |
+| Vite | Build Tool & Dev Server |
+| Tailwind CSS | Styling |
+| React Router | Client-side Routing |
+| Axios | HTTP Client |
+| ESLint | Code Quality |
 
 ## 📋 Project Structure
 
@@ -72,7 +78,7 @@ E-commerce_Website/
 
 1. **Clone or download the project**
    ```bash
-   cd E-commerce_Website
+   cd E-Commerce_Website
    ```
 
 2. **Install dependencies**
@@ -84,22 +90,8 @@ E-commerce_Website/
    ```bash
    npm run dev
    ```
-   The application will open at `http://localhost:5173` (or another available port)
+   The application will open at `http://localhost:5173` 
 
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
-
-5. **Preview production build**
-   ```bash
-   npm run preview
-   ```
-
-6. **Run ESLint checks**
-   ```bash
-   npm run lint
-   ```
 
 ## 📚 API Integration
 
@@ -160,27 +152,7 @@ This project uses the **FakeStore API** (https://fakestoreapi.com/):
 | `/products` | Products | All products listing |
 | `/products/:id` | SingleProduct | Individual product detail |
 
-## 🎯 Component Props & State
 
-### Products Component
-```javascript
-// State
-const [products, setProducts] = useState([])        // Product array
-const [loading, setLoading] = useState(false)       // Loading state
-
-// Hooks
-const navigate = useNavigate()                      // Navigation function
-```
-
-### SingleProduct Component
-```javascript
-// State
-const [product, setProduct] = useState({})          // Single product
-const [loading, setLoading] = useState(false)       // Loading state
-
-// Hooks
-const { id } = useParams()                          // Extract product ID from URL
-```
 
 ## 🚀 Performance & Optimizations
 
@@ -191,43 +163,6 @@ const { id } = useParams()                          // Extract product ID from U
 - **Code Splitting**: Component-based architecture for better tree-shaking
 - **Production Build**: Optimized bundle with Vite
 
-## 📱 Browser Support
-
-| Browser | Minimum Version |
-|---------|-----------------|
-| Chrome | Latest |
-| Firefox | Latest |
-| Safari | Latest |
-| Edge | Latest |
-
-## 🐛 Troubleshooting
-
-### Issue: Loader not showing during data fetching
-**Solution**: Ensure `return <Loader/>` statement is used in conditional rendering
-```javascript
-if(loading)
-  return <Loader/>    // ✅ Correct
-```
-
-### Issue: Image hover animation not working
-**Solution**: Add `group` class to parent div and use `group-hover:` prefix
-```javascript
-<div className="...group...">
-  <img className="...group-hover:scale-90..." />
-</div>
-```
-
-### Issue: API calls timing out
-**Solution**: 
-- Check internet connection
-- Verify FakeStore API is accessible
-- Add error handling with try-catch-finally blocks
-
-### Issue: Page not loading
-**Solution**:
-- Clear browser cache
-- Hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
-- Check browser console for errors
 
 ## 🎓 Learning Outcomes
 
@@ -241,29 +176,6 @@ This project demonstrates:
 - ✅ API error handling
 - ✅ Responsive web design principles
 - ✅ Modern JavaScript (ES6+)
-
-## 📝 Future Enhancements
-
-- [ ] Add shopping cart functionality
-- [ ] Implement product filters and sorting
-- [ ] Add product search feature
-- [ ] User authentication system
-- [ ] Order checkout process
-- [ ] Product recommendations engine
-- [ ] Dark/Light theme toggle
-- [ ] Wishlist feature
-- [ ] Product reviews and ratings
-- [ ] Payment gateway integration
-- [ ] Order history tracking
-- [ ] Admin dashboard
-
-## 🤝 Contributing
-
-Feel free to fork this project and submit pull requests with improvements!
-
-## 📄 License
-
-This project is open source and available under the MIT License.
 
 ---
 
