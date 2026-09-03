@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
        <NavBar/>
        <Category/>
        <News/>

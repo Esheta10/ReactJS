@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import Wrapper from "./Wrapper";
-
+import { useNewsContext } from "../context/NewsContext"
 const NavBar = () => {
+
+  const {fetchNews} = useNewsContext();
+
+  const timer = useRef(null);
+  const searchValue = (e)=>{
+
+    clearTimeout(timer.current);
+
+    timer.current = setTimeout( async () => {
+          const search = e.target.value;
+          if(!search) return;
+          await fetchNews(`/everything?q=${search}`)
+    }, 1000);
+   
+  }
+
   return (
     <div className="bg-black sticky top-0  z-10">
           <Wrapper>
@@ -14,6 +30,7 @@ const NavBar = () => {
           type="text"
           placeholder="Search"
           className="input w-24 md:w-auto"
+          onChange={searchValue}
         />
         <div className="dropdown dropdown-end">
           <div

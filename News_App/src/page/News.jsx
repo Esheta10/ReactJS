@@ -1,35 +1,41 @@
 import React from 'react'
 import Wrapper from '../components/Wrapper'
 import { useNewsContext } from '../context/NewsContext'
+import Loader from '../components/Loader'
 
 const News = () => {
 
 
-  const {news} = useNewsContext();
-  console.log(news)
-
+  const {news,loading} = useNewsContext();
   
+  if(loading)
+      return (
+        <main className="flex-1">
+          <Loader/>
+        </main>
+      )
 
   return (
-   <Wrapper>
-    <div className="flex flex-wrap items-stretch justify-center gap-6 mt-10">
+   <main className="flex-1">
+     <Wrapper>
+      <div className="flex flex-wrap items-stretch justify-center gap-6 mt-10">
 
-        {
-            news?.map((newsDetails, index) => (
-                <div key={index} className="h-full">
-                  <NewsCard details={newsDetails}/>
-                </div>
-            ))
-        }
+          {
+              news?.map((newsDetails, index) => (
+                  <div key={index} className="h-full">
+                    <NewsCard details={newsDetails}/>
+                  </div>
+              ))
+          }
 
-    </div>
-   </Wrapper>
+      </div>
+     </Wrapper>
+   </main>
   )
 }
 
 const NewsCard = ({details}) => {
 
-  console.log(details)
   return (
     <div className="card flex h-[450px] w-70 flex-col bg-base-300 shadow-sm p-4">
   <figure>
@@ -42,7 +48,7 @@ const NewsCard = ({details}) => {
     <h2 className="card-title line-clamp-3">{details?.title}</h2>
     <p className="line-clamp-2">{details?.description}</p>
     <div className="card-actions mt-auto justify-end">
-      <button className="btn btn-primary">Read More</button>
+      <button className="badge badge-outline px-4 py-5 mt-6 rounded-lg text-md cursor-pointer" onClick={()=>window.open(details.url)}>Read More</button>
     </div>
   </div>
 </div>

@@ -1,9 +1,19 @@
 import React from 'react'
 import Wrapper from './Wrapper'
+import { useNewsContext } from '../context/NewsContext'
 
 const Category = () => {
 
-  const categories = ["Business", "Entertainment", "General", "Health", "Sciences", "Sports", "Technology"]
+  const {fetchNews} = useNewsContext();
+
+  const categories = ["business", "entertainment", "general", "health", "sciences", "sports", "technology"]
+
+  const handleClick = async (e) => {
+
+        const category = e.currentTarget.value;
+        await fetchNews(`/everything?q=${encodeURIComponent(category)}`);
+  }
+
   return (
     <div className="bg-gray-950 sticky top-15 z-8 p-2">
         <Wrapper>
@@ -11,9 +21,9 @@ const Category = () => {
 
             {
                 categories.map((category) => (
-                        <div key={category}>
-                          <button type="submit" className="btn bg-purple-800 mt-5">{category}</button>
-                        </div>
+                        
+                          <button type="submit" className="btn bg-purple-800 mt-5" onClick={handleClick} key={category} value={category}>{category}</button>
+                        
                 ))
             }
          </div>
