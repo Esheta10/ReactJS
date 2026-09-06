@@ -1,6 +1,8 @@
 # 🌦️ Weather Application (React + Redux + Redux Thunk)
 
 A beginner-friendly Weather Application built to learn and master **React**, **Redux**, **Redux Thunk (Async Middleware)**, and **OpenWeatherMap API** integration.
+
+
 <img width="468" height="317" alt="image" src="https://github.com/user-attachments/assets/5857bacb-6c03-4b2c-bad9-5570087d627e" />
 
 ---
