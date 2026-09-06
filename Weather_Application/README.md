@@ -1,6 +1,7 @@
 # 🌦️ Weather Application (React + Redux + Redux Thunk)
 
 A beginner-friendly Weather Application built to learn and master **React**, **Redux**, **Redux Thunk (Async Middleware)**, and **OpenWeatherMap API** integration.
+<img width="468" height="317" alt="image" src="https://github.com/user-attachments/assets/5857bacb-6c03-4b2c-bad9-5570087d627e" />
 
 ---
 
@@ -36,19 +37,6 @@ This project fetches real-time weather information and 5-day forecast data from 
    - `useDispatch`: Dispatches actions to update store state.
 
 ---
-
-## 🔄 Redux Data Flow in this App
-
-```mermaid
-flowchart LR
-    A[UI / Component] -->|1. Dispatches fetchWeather(city)| B[Redux Thunk Action]
-    B -->|2. Dispatches FETCH_WEATHER_PENDING| C[Reducer]
-    B -->|3. Makes Axios API Call| D[OpenWeatherMap API]
-    D -->|4. Returns Data| B
-    B -->|5. Dispatches FETCH_CURRENT_SUCCESS| C
-    C -->|6. Updates Global State| E[Redux Store]
-    E -->|7. Re-renders with useSelector| A
-```
 
 ---
 
