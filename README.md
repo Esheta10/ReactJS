@@ -26,6 +26,7 @@ A comprehensive workspace containing multiple React practice projects, component
 
 ### **State Management**
 - **Context API** & **State_Management_Context_API** - Managing global state without prop drilling
+- **Redux_Toolkit** - Global state management with Redux Toolkit, `createSlice`, `createAsyncThunk`, and asynchronous data fetching
 - **Zustand** - Lightweight state management library with persistence and devtools
 - **Zustand_Store_Management** - Advanced Zustand patterns and middleware
 
