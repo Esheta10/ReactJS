@@ -2,24 +2,26 @@ import React from "react";
 import Layout from "../Layout/Layout";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteForever } from "react-icons/md";
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import { openDeletePopup, openEmployeePopup } from "../../store/features/popup/popup.slice";
 
 const Employees = () => {
+
+  const employeeDetails = useSelector(state => state.employee.employees)
   return (
     <Layout>
       <ul className="list bg-base-100 rounded-box shadow-md py-10">
-            <EmployeeCard/>
-            <EmployeeCard/>
-            <EmployeeCard/>
-            <EmployeeCard/>
-            <EmployeeCard/>
+            {
+              employeeDetails?.map((details)=>(
+                <EmployeeCard key={details?.id} details={details}/>
+              ))
+            }
       </ul>
     </Layout>
   );
 };
 
-const EmployeeCard = () => {
+const EmployeeCard = ({details}) => {
 
   const dispatch = useDispatch();
 
@@ -28,20 +30,24 @@ const EmployeeCard = () => {
           <div>
             <img
               className="size-10 rounded-box"
-              alt="Tailwind CSS list item"
-              src="https://img.daisyui.com/images/profile/demo/1@94.webp"
+              alt={details.firstName}
+              src={details.image || "https://img.daisyui.com/images/profile/demo/1@94.webp"}
             />
           </div>
           <div>
-            <div>Dio Lupa</div>
+            <div>{details.firstName} {details.lastName}</div>
             <div className="text-xs uppercase font-semibold opacity-60">
-              Remaining Reason
+              {details.email}
             </div>
           </div>
           <p className="list-col-wrap text-xs">
-            "Remaining Reason" became an instant hit, praised for its haunting
-            sound and emotional depth. A viral performance brought it widespread
-            recognition, making it one of Dio Lupa’s most iconic tracks.
+                  {
+    typeof details.address === 'object' && details.address !== null
+      ? [details.address.address, details.address.city, details.address.state]
+          .filter(Boolean) // Undefined, null ya empty strings ko hata dega
+          .join(', ') || "No address provided"
+      : details.address || "No address provided"
+  }
           </p>
           <button className="btn btn-square btn-ghost" onClick={()=>dispatch(openEmployeePopup())}>
            <CiEdit />
