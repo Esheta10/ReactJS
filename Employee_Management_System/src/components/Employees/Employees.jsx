@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../Layout/Layout";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteForever } from "react-icons/md";
+import {useDispatch} from "react-redux"
+import { openDeletePopup, openEmployeePopup } from "../../store/features/popup/popup.slice";
 
 const Employees = () => {
   return (
@@ -18,6 +20,8 @@ const Employees = () => {
 };
 
 const EmployeeCard = () => {
+
+  const dispatch = useDispatch();
 
     return(
          <li className="list-row">
@@ -39,7 +43,7 @@ const EmployeeCard = () => {
             sound and emotional depth. A viral performance brought it widespread
             recognition, making it one of Dio Lupa’s most iconic tracks.
           </p>
-          <button className="btn btn-square btn-ghost">
+          <button className="btn btn-square btn-ghost" onClick={()=>dispatch(openEmployeePopup())}>
            <CiEdit />
           </button>
           <button className="btn btn-square btn-ghost">
@@ -60,7 +64,7 @@ const EmployeeCard = () => {
               </g>
             </svg>
           </button>
-          <button className="btn btn-square btn-ghost">
+          <button className="btn btn-square btn-ghost" onClick={()=>dispatch(openDeletePopup())}>
             <MdDeleteForever />
           </button>
         </li>
