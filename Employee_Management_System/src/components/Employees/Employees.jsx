@@ -4,6 +4,7 @@ import { CiEdit } from "react-icons/ci";
 import { MdDeleteForever } from "react-icons/md";
 import {useDispatch, useSelector} from "react-redux"
 import { openDeletePopup, openEmployeePopup } from "../../store/features/popup/popup.slice";
+import { deleteEmployee } from "../../store/features/employee/employee.thunk";
 
 const Employees = () => {
 
@@ -70,7 +71,7 @@ const EmployeeCard = ({details}) => {
               </g>
             </svg>
           </button>
-          <button className="btn btn-square btn-ghost" onClick={()=>dispatch(openDeletePopup())}>
+          <button className="btn btn-square btn-ghost" onClick={()=>dispatch(openDeletePopup(details.id))}>
             <MdDeleteForever />
           </button>
         </li>

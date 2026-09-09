@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchEmployees } from './employee.thunk'
-import { postEmployees } from './employee.thunk'
+import { fetchEmployees, postEmployees, deleteEmployee } from './employee.thunk'
 const initialState = {
   employees: [],
   loading: false,
@@ -32,6 +31,19 @@ export const employeeSlice = createSlice({
         state.employees.unshift(action.payload);
     })
     .addCase(postEmployees.rejected, (state,action) => {
+        state.loading = false;
+        state.error = action.error.message;
+    })
+    .addCase(deleteEmployee.pending, (state) => {
+        state.loading = true;
+    })
+     .addCase(deleteEmployee.fulfilled, (state, action) => {
+        state.loading = false;
+        // Assuming the API returns the deleted user object or its id
+        const deletedId = action.payload.id;
+        state.employees = state.employees.filter((emp) => emp.id !== deletedId);
+    })
+    .addCase(deleteEmployee.rejected, (state,action) => {
         state.loading = false;
         state.error = action.error.message;
     })

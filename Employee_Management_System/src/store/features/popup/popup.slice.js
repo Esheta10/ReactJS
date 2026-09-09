@@ -2,7 +2,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
     employeePopup : false,
-    deletePopup: false
+    deletePopup: false,
+    selectedEmployeeId: null,
 }
 
 const popupSlice = createSlice({
@@ -17,10 +18,12 @@ const popupSlice = createSlice({
             state.employeePopup = false;
         },
         openDeletePopup: (state, action) => {
-            state.deletePopup = action.payload ?? true;
+            state.deletePopup = true;
+            state.selectedEmployeeId = action.payload;
         },
         closeDeletePopup: (state, action) => {
             state.deletePopup = false;
+            state.selectedEmployeeId = null;
         }
     }
 })

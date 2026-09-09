@@ -17,3 +17,11 @@ export const postEmployees = createAsyncThunk(
         return response.data;
     }
 )
+
+export const deleteEmployee = createAsyncThunk(
+    'employees/deleteEmployee',
+    async (id) => {
+        const response = await api.delete(`/users/${id}`)
+        return response.data;
+    }
+)
