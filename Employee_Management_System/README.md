@@ -2,6 +2,10 @@
 
 A modern, feature-rich **Employee Management System** built with **React**, **Redux Toolkit (RTK)**, **Tailwind CSS**, and **DaisyUI**.
 
+<img width="1318" height="607" alt="image" src="https://github.com/user-attachments/assets/8efb3443-429b-4f0e-93b2-c56e1e44a71d" />
+<img width="1307" height="612" alt="image" src="https://github.com/user-attachments/assets/6a699f6e-acf0-480c-aa36-6122975b3f8b" />
+<img width="1292" height="618" alt="image" src="https://github.com/user-attachments/assets/0d75b94c-7bc4-4fa2-907f-f2c367b1b481" />
+
 ---
 
 ## 🌟 Features & Architecture
