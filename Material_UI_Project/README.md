@@ -4,6 +4,9 @@ A modern, responsive community dashboard interface built with **React**, **Mater
 
 ---
 
+<img width="1365" height="631" alt="image" src="https://github.com/user-attachments/assets/4283530a-61dd-4890-899f-510026593ad7" />
+
+
 ## 🌟 Features
 
 1. **Responsive 3-Column Layout**: Implemented using MUI `Stack` for a seamless desktop and mobile experience.
