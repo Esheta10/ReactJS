@@ -9,7 +9,14 @@ const initialState = {
 export const employeeSlice = createSlice({
   name: 'employee',
   initialState,
-  reducers: {},
+  reducers: {
+    toggleHighlight: (state, action) => {
+      const employee = state.employees.find(emp => emp.id === action.payload);
+      if (employee) {
+        employee.highlight = !employee.highlight;
+      }
+    }
+  },
   extraReducers: (builder) => {
     builder
     .addCase(fetchEmployees.pending, (state) => {
@@ -17,7 +24,7 @@ export const employeeSlice = createSlice({
     })
     .addCase(fetchEmployees.fulfilled, (state, action) => {
         state.loading = false;
-        state.employees = action.payload;
+        state.employees = action.payload.map(emp => ({ ...emp, highlight: false }));
     })
     .addCase(fetchEmployees.rejected, (state,action) => {
         state.loading = false;
@@ -28,7 +35,7 @@ export const employeeSlice = createSlice({
     })
     .addCase(postEmployees.fulfilled, (state, action) => {
         state.loading = false;
-        state.employees.unshift(action.payload);
+        state.employees.unshift({ ...action.payload, highlight: false });
     })
     .addCase(postEmployees.rejected, (state,action) => {
         state.loading = false;
@@ -50,7 +57,7 @@ export const employeeSlice = createSlice({
   }
 })
 
-export const {  } = employeeSlice.actions
+export const { toggleHighlight } = employeeSlice.actions
 
 export default employeeSlice.reducer
 
