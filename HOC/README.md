@@ -8,7 +8,7 @@ This project demonstrates the use of Higher-Order Components (HOC) in React. An 
 
 ## HOCs Implemented
 - `withCardLook`: Wraps a component in a card-style container with gray background and padding.
-- `withBorder`: Wraps a component in a blue-bordered container.
+- `withBorder`: Wraps a component in a black-bordered container.
 
 ## Folder Structure
 - `src/components/`: Contains basic functional components (`Alpha.jsx`, `Beta.jsx`).
