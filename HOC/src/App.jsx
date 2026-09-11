@@ -14,16 +14,18 @@ const App = () => {
 
   return (
     <div>
-      <WithCardLookAlpha/>
-      <WithCardLookBeta/>
+      <WithCardLookAlpha user="Esheta"/>
+      <WithCardLookBeta  user="ESHETA"/>
 
-      <WithBorderAlpha/>
-      <WithBorderBeta/>
+      <WithBorderAlpha user="Alice"/>
+      <WithBorderBeta user="Bob"/>
 
     </div>
   )
 }
 
 export default App
+
+
 
 

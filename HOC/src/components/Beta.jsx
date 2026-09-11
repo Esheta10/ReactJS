@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Beta = () => {
+const Beta = (props) => {
   return (
     <div>
-      Beta
+      Beta - {props.user}
     </div>
   )
 }
